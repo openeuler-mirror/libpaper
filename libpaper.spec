@@ -1,11 +1,13 @@
 Name:           libpaper
 Version:        1.1.24
-Release:        24
+Release:        25
 Summary:        Library for handling paper characteristics
 License:        GPLv2
 URL:            http://packages.qa.debian.org/libp/libpaper.html
 Source0:        http://ftp.debian.org/debian/pool/main/libp/libpaper/%{name}_%{version}+nmu4.tar.gz
-
+patch0: libpaper-useglibcfallback.patch
+patch1: libpaper-file-leak.patch
+ 
 BuildRequires:  gcc, libtool, gettext, gawk
 
 %description
@@ -75,6 +77,8 @@ done
 %{_mandir}/man3/*
 
 %changelog
+* Wed Mar 18 2020 openEuler Buildteam <buildteam@openeuler.org> - 1.1.24-25
+- fix memory leark and bugfix
 * Thu Jan 05 2020 openEuler Buildteam <buildteam@openeuler.org> - 1.1.24-24
 - remove useless patch
 
