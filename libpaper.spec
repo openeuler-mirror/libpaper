@@ -5,8 +5,8 @@ Summary:        Library for handling paper characteristics
 License:        GPLv2
 URL:            http://packages.qa.debian.org/libp/libpaper.html
 Source0:        http://ftp.debian.org/debian/pool/main/libp/libpaper/%{name}_%{version}+nmu4.tar.gz
-patch0: libpaper-useglibcfallback.patch
-patch1: libpaper-file-leak.patch
+Patch0: libpaper-useglibcfallback.patch
+Patch1: libpaper-file-leak.patch
  
 BuildRequires:  gcc, libtool, gettext, gawk
 
